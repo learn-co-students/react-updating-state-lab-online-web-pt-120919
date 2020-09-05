@@ -20,9 +20,6 @@ class YouTubeDebugger extends Component {
             settings:{
                 ...this.state.settings,
                 bitrate: 12,
-                video: {
-                    ...this.state.settings.video,
-                }
             }  
         })
     }
@@ -33,7 +30,7 @@ class YouTubeDebugger extends Component {
                 ...this.state.settings,
                 video: {
                     ...this.state.settings.video,
-                    resolution: "720p",
+                    resolution: "720p"
                 }
             }  
         })
@@ -41,11 +38,11 @@ class YouTubeDebugger extends Component {
 
     render(){
         const verb = this.state.settings
-            debugger
         return(
             <div>
+                <h5>Bitrate</h5>
                 <button className = "bitrate" onClick={this.handleClick}>{verb.bitrate ? verb.bitrate : this.state.settings.bitrate}</button>
-                <p>Nothing here!</p>
+                <h5>Resolution</h5>
                 <button className = "resolution" onClick={this.handleClickResolution}>{verb.video.resolution ? verb.video.resolution : verb.video.resolution}</button>
             </div>
         )
