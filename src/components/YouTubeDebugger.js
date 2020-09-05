@@ -1,6 +1,7 @@
 import React, {Component} from "react"
 
 class YouTubeDebugger extends Component {
+    
     constructor(props){
         super(props)
         this.state = {
@@ -40,13 +41,13 @@ class YouTubeDebugger extends Component {
         const verb = this.state.settings
         return(
             <div>
-                <h5>Bitrate</h5>
+                <h5>Click to change the Bitrate</h5>
                 <button className = "bitrate" onClick={this.handleClick}>{verb.bitrate ? verb.bitrate : this.state.settings.bitrate}</button>
-                <h5>Resolution</h5>
+                <h5>Click to change the Resolution</h5>
                 <button className = "resolution" onClick={this.handleClickResolution}>{verb.video.resolution ? verb.video.resolution : verb.video.resolution}</button>
             </div>
         )
     }
-
 }
+
 export default YouTubeDebugger
