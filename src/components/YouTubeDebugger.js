@@ -15,14 +15,17 @@ class YouTubeDebugger extends Component {
         }
     }
      
-    // handleClick = () => {
-    //     this.setState({
-    //         settings: {
-    //             ...this.state.settings,
-    //             bitrate: 12
-    //         }      
-    //     })
-    // }
+    handleClick = () => {
+        this.setState({
+            settings:{
+                ...this.state.settings,
+                bitrate: 12,
+                video: {
+                    ...this.state.settings.video,
+                }
+            }  
+        })
+    }
 
     handleClickResolution = () => {
         this.setState({
@@ -41,7 +44,7 @@ class YouTubeDebugger extends Component {
             debugger
         return(
             <div>
-                <button className = "bitrate" onClick={this.handleClickResolution}>{verb.bitrate ? verb.bitrate : this.state.settings.bitrate}</button>
+                <button className = "bitrate" onClick={this.handleClick}>{verb.bitrate ? verb.bitrate : this.state.settings.bitrate}</button>
                 <p>Nothing here!</p>
                 <button className = "resolution" onClick={this.handleClickResolution}>{verb.video.resolution ? verb.video.resolution : verb.video.resolution}</button>
             </div>
