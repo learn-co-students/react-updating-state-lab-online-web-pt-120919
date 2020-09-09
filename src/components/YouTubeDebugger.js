@@ -29,7 +29,7 @@ class YouTubeDebugger extends React.Component {
     clickHandleResolution = () => {
         this.setState({
         settings: { 
-            bitrate: 8,
+            ...this.state.settings,
             video: {
                 
             ...this.state.video,
